@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "study_name": "benchmark_v1_sac_vm60",
+  "total_trials": 60,
+  "warmup_trials": 12,
+  "warmup_workers": 6,
+  "tpe_trials": 48,
+  "tpe_workers": 28,
+  "max_timesteps": 100800,
+  "checkpoints": [
+    16800,
+    33600,
+    50400,
+    67200,
+    84000,
+    100800
+  ],
+  "preflight_workers": 4,
+  "preflight_timesteps": 2000,
+  "preflight_learning_starts": 500,
+  "storage": "journal",
+  "prune_from_step": 50400,
+  "sampler_seed": 20260908,
+  "learning_seed": 42,
+  "validation_seed_sets": [
+    [
+      420001,
+      420002,
+      420003,
+      420004,
+      420005,
+      420006
+    ],
+    [
+      430001,
+      430002,
+      430003,
+      430004,
+      430005,
+      430006
+    ]
+  ],
+  "c_unserved": 1.0,
+  "lambda_pf": 1.0,
+  "extreme_events": null,
+  "training_split": "train",
+  "evaluation_split": "optuna_validation",
+  "blocked_local_hostname": "SET_LOCAL_HOSTNAME_BEFORE_CAMPAIGN",
+  "scenario_manifest_sha256": "91b28e5d82d79da488f167eb7cd3d9dcb9ee805b3726dc232b63535e62c91830",
+  "sampling_note": "Warm-up is random; TPE uses completed warm-up observations and constant_liar from trial 12 onward.",
+  "pruning_note": "Conservative fixed start at 50400; no pruning for the first 12 trials.",
+  "resume_policy": "Resume the persistent campaign; dead interrupted trials remain explicit failures and count against the 60-trial cap."
+}
